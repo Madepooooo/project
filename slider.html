@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="grid12columns/grid12.css">
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+       #slider{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 2px solid;
+        margin: 20px auto;
+        overflow: hidden;
+        
+       }
+       #slider li{
+        list-style: none;
+        position: absolute;
+        animation: slider 20s infinite;
+        z-index: 1;
+       }
+       #responsiveslide:nth-child(1){
+        background: url('slider/slide1.jpg');
+        width:500px;
+        height: 500px;
+        z-index: 2;
+       }
+       #responsiveslide:nth-child(2){
+        background: url('slider/slide2.jpg');
+        width:500px;
+        height: 500px;
+        z-index: 2;
+       }
+       #responsiveslide:nth-child(3){
+        background: url('slider/slide3.jpg');
+        width:500px;
+        height: 500px;
+        z-index: 2;
+       }
+       #responsiveslide:nth-child(4){
+        background: url('slider/slide4.jpg');
+        width:500px;
+        height: 500px;
+        z-index: 2;
+       }
+       #slider li:nth-child(1){
+        left: 0;
+       }
+       #slider li:nth-child(2){
+        left:500px;
+        animation-delay: -15s;
+       }
+       #slider li:nth-child(3){
+        left:500px;
+        animation-delay: -10s;
+       }
+       #slider li:nth-child(4){
+        left:500px;
+        animation-delay: -5s;
+       }
+       @keyframes slider {
+        0%,20%{
+            left: 0;
+        }
+        25%{
+            left: -500px;
+        }
+        26%{
+            z-index: 0;
+        }
+        28%{
+            left:500px;
+        }
+        95%{
+            left:500px;
+        }
+        100%{
+            left: 0;
+        }
+       }
+       @media screen and (max-width:768px){
+
+       }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- <div class="col-xs-12 col-sm-11 col-md-10 col-lg-8"> -->
+            <ul id="slider">
+                <li><div class="responsiveslide"></div></li>
+                <li><div class="responsiveslide"></div></li>
+                <li><div class="responsiveslide"></div></li>
+                <li><div class="responsiveslide"></div></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
